@@ -1,4 +1,12 @@
-import { Experience, Skill, Project, Education, SocialLinks } from '@/types';
+import { 
+  Experience, 
+  Skill, 
+  Project, 
+  Education, 
+  SocialLinks,
+  Recommendation 
+} from '@/types';
+
 import { Github, Linkedin, Mail } from 'lucide-react';
 import React from 'react';
 
@@ -7,6 +15,7 @@ export const personalInfo = {
   roles: ['Software Engineer', 'Backend Developer', 'Full-Stack Developer'],
   email: 'jahnavireddy.bh@gmail.com',
   location: 'Fort Wayne, IN, USA (Open to relocation)',
+  greeting: "Hi, I'm Jahnavi!",
   description:
     "I’m a software engineer who enjoys turning messy, real-world problems into reliable backend services and simple, intuitive experiences. I like working end-to-end—designing APIs, wiring data pipelines, and shipping features that actually make someone’s day easier.",
   aboutText: [
@@ -80,7 +89,7 @@ export const skills: Skill[] = [
   { id: '16', name: 'REST APIs', icon: '🔗', category: 'backend' },
   { id: '17', name: 'Microservices', icon: '📦', category: 'backend' },
 
-  // DevOps & Cloud
+  // DevOps
   { id: '20', name: 'Docker', icon: '🐳', category: 'devops' },
   { id: '21', name: 'Kubernetes', icon: '☸️', category: 'devops' },
   { id: '22', name: 'AWS', icon: '☁️', category: 'devops' },
@@ -104,7 +113,7 @@ export const skills: Skill[] = [
   { id: '51', name: 'Selenium', icon: '🧪', category: 'testing' },
   { id: '52', name: 'Postman', icon: '📮', category: 'testing' },
 
-  // Other Skills
+  // Other
   { id: '60', name: 'Agile / Scrum', icon: '🏃', category: 'other-skills' },
   { id: '61', name: 'Jira', icon: '🧩', category: 'other-skills' },
   { id: '62', name: 'Confluence', icon: '📘', category: 'other-skills' },
@@ -118,11 +127,7 @@ export const projects: Project[] = [
     description:
       'Designed and implemented an e-commerce application where admins can manage products and customers can browse and place orders. Added secure authentication with .NET and JWT-based access levels and tuned APIs to keep server response times under 3 seconds.',
     technologies: ['.NET', 'C#', 'JWT', 'SQL', 'REST APIs'],
-    links: {
-      github: '#',
-      screenshots: '',
-      publication: '',
-    },
+    links: { github: '', screenshots: '', publication: '' },
     image: '/Project1.png',
   },
   {
@@ -131,11 +136,7 @@ export const projects: Project[] = [
     description:
       'Built an Android learning platform using Python, Flask, and Elasticsearch to help students prepare for UPSC exams. Collaborated with a small team to deliver search and content features and helped the app reach a top ten ranking among UPSC-related apps on the Play Store.',
     technologies: ['Python', 'Flask', 'Elasticsearch', 'Android'],
-    links: {
-      github: '#',
-      screenshots: '',
-      publication: '',
-    },
+    links: { github: '', screenshots: '', publication: '' },
     image: '/Project2.png',
   },
   {
@@ -144,24 +145,16 @@ export const projects: Project[] = [
     description:
       'Developed a web app for University of Florida students to discover affordable, local shopping deals near campus. Implemented authentication with JWT and Passport, and connected the app to an SQL database via APIs written in Go.',
     technologies: ['Go', 'JWT', 'Passport', 'SQL', 'REST APIs'],
-    links: {
-      github: '#',
-      screenshots: '',
-      publication: '',
-    },
+    links: { github: '', screenshots: '', publication: '' },
     image: '/Project3.jpg',
   },
   {
     id: '4',
     title: 'Action Identification in 2D Images',
     description:
-      'Implemented and evaluated deep learning models to classify human actions from 2D images using the Stanford-40 dataset. Compared architectures like ResNet-50, VGG16/19, EfficientNet-B7, and Inception V3, concluding that Inception V3 provided the best performance for this task.',
-    technologies: ['Python', 'TensorFlow / Keras', 'CNNs', 'Computer Vision'],
-    links: {
-      github: '#',
-      screenshots: '',
-      publication: '',
-    },
+      'Implemented deep learning models to classify human actions from 2D images using the Stanford-40 dataset. Compared ResNet-50, VGG16/19, EfficientNet-B7, and Inception V3—Inception V3 performed best.',
+    technologies: ['Python', 'TensorFlow', 'CNNs', 'Computer Vision'],
+    links: { github: '', screenshots: '', publication: '' },
     image: '/Project3.jpg',
   },
 ];
@@ -181,15 +174,17 @@ export const education: Education[] = [
     degree: 'Microsoft Certified: Azure Fundamentals',
     institution: 'Microsoft',
     duration: 'Certification',
-    description: 'Fundamentals of cloud concepts, Azure services, security, and cost management.',
+    description:
+      'Fundamentals of cloud concepts, Azure services, security, and cost management.',
     type: 'certification',
   },
   {
     id: '3',
-    degree: 'AWS Academy Graduate – Cloud Foundations',
+    degree: 'AWS Academy Cloud Foundations',
     institution: 'AWS Academy',
     duration: 'Certification',
-    description: 'Introduced to core AWS services, cloud concepts, security, architecture, and pricing models.',
+    description:
+      'Core AWS services, cloud concepts, security, architecture, and pricing models.',
     type: 'certification',
   },
   {
@@ -198,7 +193,7 @@ export const education: Education[] = [
     institution: 'Oracle',
     duration: 'Certification',
     description:
-      'Training across DevOps practices and multicloud design patterns spanning deployment automation, monitoring, and resilient infrastructure.',
+      'DevOps & multicloud design patterns across deployment automation and resilient infrastructure.',
     type: 'certification',
   },
   {
@@ -207,12 +202,10 @@ export const education: Education[] = [
     institution: 'Oracle',
     duration: 'Certification',
     description:
-      'Training across DevOps practices and multicloud design patterns spanning deployment automation, monitoring, and resilient infrastructure.',
+      'Automation, monitoring, CI/CD, and large-scale system infrastructure.',
     type: 'certification',
   },
 ];
-
-
 
 export const socialLinks: SocialLinks[] = [
   {
@@ -231,3 +224,6 @@ export const socialLinks: SocialLinks[] = [
     url: 'mailto:jahnavireddy.bh@gmail.com',
   },
 ];
+
+// Empty so the Recommendations section disappears safely
+export const recommendations: Recommendation[] = [];
