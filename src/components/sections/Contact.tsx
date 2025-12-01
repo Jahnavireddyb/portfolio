@@ -19,7 +19,7 @@ export default function Contact({ theme }: ContactProps) {
 
     const form = e.currentTarget;
     const formData = new FormData(form);
-    
+
     // EmailJS configuration - REPLACE WITH YOUR IDS
     const serviceId = 'Portfolio_Contact';
     const templateId = 'template_08rr27f';
@@ -30,30 +30,33 @@ export default function Contact({ theme }: ContactProps) {
       from_email: formData.get('email') as string,
       subject: formData.get('subject') as string,
       message: formData.get('message') as string,
-      to_email: personalInfo.email, // Your email
+      to_email: personalInfo.email,
     };
 
     try {
       const response = await emailjs.send(serviceId, templateId, templateParams, publicKey);
-      
-      setToastMessage('Message sent successfully! 🎉 I\'ll get back to you shortly.');
+
+      setToastMessage("Message sent successfully! 🎉 I'll get back to you shortly.");
       setShowToast(true);
-      
-      // Reset form safely
+
       if (form) {
         form.reset();
       }
-      
+
       setTimeout(() => {
         setShowToast(false);
       }, 5000);
     } catch (error: any) {
       console.error('Failed to send email:', error);
       console.error('Error details:', error.text || error.message);
-      
-      setToastMessage(`Failed to send message: ${error.text || error.message || 'Please try again or email me directly.'}`);
+
+      setToastMessage(
+        `Failed to send message: ${
+          error.text || error.message || 'Please try again or email me directly.'
+        }`,
+      );
       setShowToast(true);
-      
+
       setTimeout(() => {
         setShowToast(false);
       }, 5000);
@@ -76,71 +79,114 @@ export default function Contact({ theme }: ContactProps) {
   };
 
   return (
-    <section id="contact" style={{ 
-      minHeight: 'auto',
-      padding: '3rem 2rem',
-      display: 'flex', 
-      alignItems: 'center', 
-      justifyContent: 'center',
-      backgroundColor: 'var(--bg-secondary)'
-    }}>
+    <section
+      id="contact"
+      style={{
+        minHeight: 'auto',
+        padding: '3rem 2rem',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: 'var(--bg-secondary)',
+      }}
+    >
       <div style={{ maxWidth: '1200px', width: '100%' }}>
         <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-          <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem', fontWeight: '700', color: 'var(--accent)' }}>
+          <h2
+            style={{
+              fontSize: '2.5rem',
+              marginBottom: '1rem',
+              fontWeight: '700',
+              color: 'var(--accent)',
+            }}
+          >
             Get In Touch
           </h2>
           <p style={{ fontSize: '1rem', color: 'var(--text-secondary)' }}>
-            Have a project in mind or want to chat? Feel free to reach out! 📬
+            Looking for a software engineer, collaborator, or just want to chat about systems and
+            side projects? Feel free to reach out. 📬
           </p>
         </div>
 
-        <div style={{ 
-          display: 'grid', 
-          gridTemplateColumns: '1fr 1.5fr', 
-          gap: '4rem',
-          alignItems: 'start',
-          width: '100%',
-        }} className="grid-cols-1 lg:grid-cols-[1fr_1.5fr] contact-grid">
-          
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: '1fr 1.5fr',
+            gap: '4rem',
+            alignItems: 'start',
+            width: '100%',
+          }}
+          className="grid-cols-1 lg:grid-cols-[1fr_1.5fr] contact-grid"
+        >
           {/* Left Side - Contact Info */}
           <div style={{ order: 1, textAlign: 'left' }} className="contact-info">
-            <h3 style={{ fontSize: '1.8rem', marginBottom: '1.5rem', fontWeight: '700', textAlign: 'left' }}>
-              Let's Connect 🤝
+            <h3
+              style={{
+                fontSize: '1.8rem',
+                marginBottom: '1.5rem',
+                fontWeight: '700',
+                textAlign: 'left',
+              }}
+            >
+              Let&apos;s Connect 🤝
             </h3>
-            <p style={{ color: 'var(--text-secondary)', lineHeight: '1.7', marginBottom: '2rem', textAlign: 'left' }}>
-              I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision. 
-              Messages sent through this form will be delivered directly to my inbox. Feel free to contact me using 
-              the form or reach out directly via email.
+            <p
+              style={{
+                color: 'var(--text-secondary)',
+                lineHeight: '1.7',
+                marginBottom: '2rem',
+                textAlign: 'left',
+              }}
+            >
+              I’m always happy to talk about ideas that
+              make everyday workflows smoother. Whether it’s a role, a project, or just a curious
+              conversation, feel free to reach out. You can email me directly or use this form!
+      
             </p>
 
             {/* Contact Details */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                <div style={{
-                  width: '48px',
-                  height: '48px',
-                  backgroundColor: 'var(--accent)',
-                  borderRadius: '12px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  fontSize: '1.5rem',
-                  flexShrink: 0,
-                }}>
+                <div
+                  style={{
+                    width: '48px',
+                    height: '48px',
+                    backgroundColor: 'var(--accent)',
+                    borderRadius: '12px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontSize: '1.5rem',
+                    flexShrink: 0,
+                  }}
+                >
                   ✉️
                 </div>
                 <div>
-                  <div style={{ 
-                    fontSize: '1rem', 
-                    color: theme === 'dark' ? '#ffffff' : '#000000', 
-                    marginBottom: '0.2rem', 
-                    fontWeight: '600' 
-                  }} className="contact-label">
+                  <div
+                    style={{
+                      fontSize: '1rem',
+                      color: theme === 'dark' ? '#ffffff' : '#000000',
+                      marginBottom: '0.2rem',
+                      fontWeight: '600',
+                    }}
+                    className="contact-label"
+                  >
                     Email
                   </div>
-                  <div style={{ fontWeight: '600', color: 'var(--text-secondary)', display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.9rem' }} className="contact-value">
+                  <div
+                    style={{
+                      fontWeight: '600',
+                      color: 'var(--text-secondary)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '0.5rem',
+                      fontSize: '0.9rem',
+                    }}
+                    className="contact-value"
+                  >
                     {personalInfo.email}
-                    <button 
+                    <button
                       onClick={handleCopyEmail}
                       style={{
                         background: 'none',
@@ -149,6 +195,7 @@ export default function Contact({ theme }: ContactProps) {
                         fontSize: '1rem',
                       }}
                       aria-label="Copy email"
+                      type="button"
                     >
                       📋
                     </button>
@@ -157,30 +204,42 @@ export default function Contact({ theme }: ContactProps) {
               </div>
 
               <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                <div style={{
-                  width: '48px',
-                  height: '48px',
-                  backgroundColor: '#3b82f6',
-                  borderRadius: '12px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  fontSize: '1.5rem',
-                  flexShrink: 0,
-                }}>
+                <div
+                  style={{
+                    width: '48px',
+                    height: '48px',
+                    backgroundColor: '#3b82f6',
+                    borderRadius: '12px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontSize: '1.5rem',
+                    flexShrink: 0,
+                  }}
+                >
                   📍
                 </div>
                 <div>
-                  <div style={{ 
-                    fontSize: '1rem', 
-                    color: theme === 'dark' ? '#ffffff' : '#000000', 
-                    marginBottom: '0.2rem', 
-                    fontWeight: '600' 
-                  }} className="contact-label">
+                  <div
+                    style={{
+                      fontSize: '1rem',
+                      color: theme === 'dark' ? '#ffffff' : '#000000',
+                      marginBottom: '0.2rem',
+                      fontWeight: '600',
+                    }}
+                    className="contact-label"
+                  >
                     Location
                   </div>
-                  <div style={{ fontWeight: '600', color: 'var(--text-secondary)', fontSize: '0.9rem' }} className="contact-value">
-                    Chicago, USA
+                  <div
+                    style={{
+                      fontWeight: '600',
+                      color: 'var(--text-secondary)',
+                      fontSize: '0.9rem',
+                    }}
+                    className="contact-value"
+                  >
+                    Fort Wayne, IN, USA (Open to relocation)
                   </div>
                 </div>
               </div>
@@ -188,19 +247,38 @@ export default function Contact({ theme }: ContactProps) {
           </div>
 
           {/* Right Side - Contact Form */}
-          <div style={{
-            backgroundColor: 'var(--card-bg)',
-            padding: '2.5rem',
-            borderRadius: '20px',
-            border: '1px solid var(--border)',
-            boxShadow: 'var(--shadow-lg)',
-            order: 2,
-            width: '100%',
-          }} className="contact-form">
+          <div
+            style={{
+              backgroundColor: 'var(--card-bg)',
+              padding: '2.5rem',
+              borderRadius: '20px',
+              border: '1px solid var(--border)',
+              boxShadow: 'var(--shadow-lg)',
+              order: 2,
+              width: '100%',
+            }}
+            className="contact-form"
+          >
             <form onSubmit={handleContactSubmit}>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', marginBottom: '1.5rem' }} className="form-name-email">
+              <div
+                style={{
+                  display: 'grid',
+                  gridTemplateColumns: '1fr 1fr',
+                  gap: '1.5rem',
+                  marginBottom: '1.5rem',
+                }}
+                className="form-name-email"
+              >
                 <div>
-                  <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '500', fontSize: '0.9rem', color: 'var(--text-primary)' }}>
+                  <label
+                    style={{
+                      display: 'block',
+                      marginBottom: '0.5rem',
+                      fontWeight: '500',
+                      fontSize: '0.9rem',
+                      color: 'var(--text-primary)',
+                    }}
+                  >
                     Name
                   </label>
                   <input
@@ -222,7 +300,15 @@ export default function Contact({ theme }: ContactProps) {
                   />
                 </div>
                 <div>
-                  <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '500', fontSize: '0.9rem', color: 'var(--text-primary)' }}>
+                  <label
+                    style={{
+                      display: 'block',
+                      marginBottom: '0.5rem',
+                      fontWeight: '500',
+                      fontSize: '0.9rem',
+                      color: 'var(--text-primary)',
+                    }}
+                  >
                     Email
                   </label>
                   <input
@@ -246,7 +332,15 @@ export default function Contact({ theme }: ContactProps) {
               </div>
 
               <div style={{ marginBottom: '1.5rem' }}>
-                <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '500', fontSize: '0.9rem', color: 'var(--text-primary)' }}>
+                <label
+                  style={{
+                    display: 'block',
+                    marginBottom: '0.5rem',
+                    fontWeight: '500',
+                    fontSize: '0.9rem',
+                    color: 'var(--text-primary)',
+                  }}
+                >
                   Subject
                 </label>
                 <input
@@ -269,7 +363,15 @@ export default function Contact({ theme }: ContactProps) {
               </div>
 
               <div style={{ marginBottom: '1.5rem' }}>
-                <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '500', fontSize: '0.9rem', color: 'var(--text-primary)' }}>
+                <label
+                  style={{
+                    display: 'block',
+                    marginBottom: '0.5rem',
+                    fontWeight: '500',
+                    fontSize: '0.9rem',
+                    color: 'var(--text-primary)',
+                  }}
+                >
                   Message
                 </label>
                 <textarea
@@ -323,18 +425,21 @@ export default function Contact({ theme }: ContactProps) {
 
       {/* Toast Notification */}
       {showToast && (
-        <div style={{
-          position: 'fixed',
-          backgroundColor: 'var(--card-bg)',
-          color: 'var(--text-primary)',
-          padding: '1rem 1.5rem',
-          borderRadius: '12px',
-          border: '1px solid var(--border)',
-          boxShadow: 'var(--shadow-lg)',
-          zIndex: 10000,
-          animation: 'fadeInUp 0.3s ease-out',
-          maxWidth: '400px',
-        }} className="toast-notification">
+        <div
+          style={{
+            position: 'fixed',
+            backgroundColor: 'var(--card-bg)',
+            color: 'var(--text-primary)',
+            padding: '1rem 1.5rem',
+            borderRadius: '12px',
+            border: '1px solid var(--border)',
+            boxShadow: 'var(--shadow-lg)',
+            zIndex: 10000,
+            animation: 'fadeInUp 0.3s ease-out',
+            maxWidth: '400px',
+          }}
+          className="toast-notification"
+        >
           {toastMessage}
         </div>
       )}

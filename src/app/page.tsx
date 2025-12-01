@@ -10,7 +10,6 @@ import About from '@/components/sections/About';
 import Experience from '@/components/sections/Experience';
 import Skills from '@/components/sections/Skills';
 import Projects from '@/components/sections/Projects';
-import Recommendations from '@/components/sections/Recommendations';
 import Contact from '@/components/sections/Contact';
 import { personalInfo } from '@/data/portfolio';
 import type { SkillCategory } from '@/types';
@@ -69,7 +68,7 @@ export default function Home() {
     const handleScroll = () => {
       setShowScrollTop(window.scrollY > 300);
       
-      const sections = ['home', 'about', 'experience', 'skills', 'projects', 'education', 'recommendations', 'contact'];
+      const sections = ['home', 'about', 'experience', 'skills', 'projects', 'education', 'contact'];
       const scrollPosition = window.scrollY + 300;
       
       for (const sectionId of sections) {
@@ -97,7 +96,7 @@ export default function Home() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const sections = ['home', 'about', 'experience', 'skills', 'projects', 'education', 'recommendations', 'contact'];
+  const sections = ['home', 'about', 'experience', 'skills', 'projects', 'education', 'contact'];
 
   return (
     <main className="min-h-screen" style={{ backgroundColor: 'var(--bg-primary)', color: 'var(--text-primary)' }}>
@@ -111,7 +110,6 @@ export default function Home() {
       <Skills activeSkillTab={activeSkillTab} setActiveSkillTab={setActiveSkillTab} theme={theme} />
       <Projects />
       <Education />
-      <Recommendations />
       <Contact theme={theme} />
       
       <Footer />

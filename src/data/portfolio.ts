@@ -1,18 +1,17 @@
-import { Experience, Skill, Project, Recommendation, Education, SocialLinks } from '@/types';
-import { Github, Linkedin, Mail, Twitter } from 'lucide-react';
+import { Experience, Skill, Project, Education, SocialLinks } from '@/types';
+import { Github, Linkedin, Mail } from 'lucide-react';
 import React from 'react';
 
 export const personalInfo = {
-  name: 'Harsh Vora',
-  roles: ['Full Stack Engineer', 'Software Engineer', 'Backend Engineer', 'Mobile Developer'],
-  email: 'harshvora242@gmail.com',
-  greeting: "Hi, my name is",
-  description: "I’m a problem-solver at heart who loves turning ideas into working systems. Whether it’s designing backend infrastructure, building full-stack features, or integrating AI to enhance functionality and efficiency, I focus on creating solutions that are elegant, reliable, and built with purpose.",
+  name: 'Jahnavi Reddy Bheemavarapu',
+  roles: ['Software Engineer', 'Backend Developer', 'Full-Stack Developer'],
+  email: 'jahnavireddy.bh@gmail.com',
+  location: 'Fort Wayne, IN, USA (Open to relocation)',
+  description:
+    "I’m a software engineer who enjoys turning messy, real-world problems into reliable backend services and simple, intuitive experiences. I like working end-to-end—designing APIs, wiring data pipelines, and shipping features that actually make someone’s day easier.",
   aboutText: [
-    "Hi, I’m Harsh 👋 - a curious problem solver and software engineer. What started as a love for gaming soon turned into a fascination with how those worlds were built, which led me to software engineering.",
-    "I design and develop reactive, event-driven, and high-performance applications that make complex workflows simple and reliable. My toolkit includes Java 17, Spring Boot, Project Reactor, RabbitMQ, PostgreSQL, and Netflix Conductor, with hands-on experience in TypeScript, React, and modern web development.",
-    "I’m big on clean architecture, automation, and developer experience, the kind of principles that make engineering both powerful and enjoyable. Over the years, I’ve worked across the full SDLC, from design and coding to testing, deployment, and production support, thriving in Agile/Scrum teams that value collaboration and continuous learning.",
-    "When I’m not coding, I enjoy exploring new food spots around the city, biking along Chicago’s lakefront, and staying active at the gym."
+    "Hello, I’m Jahnavi, a developer based in the United States. I love building tools that are simple, intuitive, and genuinely useful. I completed my Master’s in Computer Science at the University of Florida, where I focused on full-stack development and backend engineering.",
+    "I’ve worked across automation, microservices, and data-driven systems — most recently as a Software Engineer at UnitedHealth Group, improving claim workflows and simplifying processes through backend logic and clean, reliable code. I’m currently looking for a developer role where I can continue creating thoughtful, user-centered systems. Hire me!",
   ],
   resumeUrl: '/resume.pdf',
 };
@@ -21,145 +20,147 @@ export const experiences: Experience[] = [
   {
     id: '1',
     title: 'Software Engineer',
-    company: 'GE Healthcare',
-    duration: 'June 2024 - Present',
-    description: 'Designed and optimized reactive, event-driven backend systems using Java 17, Spring Boot, Project Reactor, and RabbitMQ - improving data-pipeline scalability and real-time streaming efficiency across cloud platforms.'  
+    company: 'UnitedHealth Group',
+    duration: 'Dec 2024 – Present',
+    description:
+      'Automate healthcare claim validation using Python, REST APIs, and SQL-backed pipelines. Parse scanned provider/member documents and Excel/CSV feeds into internal databases, add fallbacks for API failures, and ship production updates through Azure Pipelines and Bitbucket.',
   },
   {
     id: '2',
-    title: 'Software Engineer Specialist',
-    company: 'GE Healthcare',
-    duration: 'October 2021 - June 2024',
-    description: 'Engineered distributed microservices and REST APIs for healthcare imaging workflows, boosting throughput 3 - 5× and enhancing reliability through Docker-based deployments, testing automation, and Agile delivery.' 
+    title: 'Full Stack Developer',
+    company: 'University of Florida',
+    duration: 'Jul 2023 – May 2024',
+    description:
+      'Built and deployed a high-availability admin dashboard with Java, Spring Boot, Hibernate, and React. Added D3.js visualizations for shark attack geodata, wired CI/CD with Jenkins and Docker, and collaborated in an Agile team to support operational reporting for campus stakeholders.',
   },
   {
     id: '3',
-    title: 'Software Developer Intern - MERN Stack',
-    company: 'SQUADDD',
-    duration: 'July 2021 - October 2021',
-    description: 'Built RESTful APIs and middleware using Express.js, JWT, and MongoDB Atlas, improving backend integration by 20%. Collaborated with front-end teams in an Agile setup to design cohesive, secure, and scalable full-stack solutions.'
+    title: 'Full Stack Developer (Unpaid)',
+    company: 'University of Florida',
+    duration: 'Jan 2023 – May 2023',
+    description:
+      'Engineered a Spring MVC backend that streamed real-time data via Kafka and stored assets in AWS S3. Developed a responsive admin UI with React, HTML5, CSS3, and Material-UI and implemented a Java-based traffic monitoring module for distributed data collection.',
   },
   {
     id: '4',
-    title: 'Graduate Teaching Assistant - Discrete Structures',
-    company: 'Illinois Institute of Technology',
-    duration: 'January 2021 - May 2021',
-    description: 'Led weekly virtual office hours to support students, clarify course concepts, and guide them through assignments. Assisted the professor in preparing assignments and detailed solution sets and contributed to maintaining a smooth academic workflow for the course.'
+    title: 'Guidewire Software Developer',
+    company: 'Fusion Software Solutions',
+    duration: 'Dec 2020 – Nov 2022',
+    description:
+      'Configured ClaimCenter PCFs, plug-ins, batch jobs, and business rules to support insurance claims workflows. Built custom screens for exposure and incident creation, updated financials, and worked extensively with Oracle DB and SQL Server for policy and claims data.',
   },
   {
     id: '5',
-    title: 'Android Application Developer',
-    company: 'M-Intellect Global',
-    duration: 'May 2017 - July 2017',
-    description: 'Developed feature-rich Android apps using SQLite, RecyclerView, and custom UI components. Integrated third-party libraries like Retrofit and Picasso to enhance data handling and user-experience performance.'
-    },
+    title: 'Software Developer Intern',
+    company: 'Fusion Software Solutions',
+    duration: 'Apr 2020 – Aug 2020',
+    description:
+      'Developed an online insurance management web application using Java, Spring, HTML, CSS, and MySQL. Designed database schemas, implemented CRUD operations, and collaborated with the team on debugging, testing, and meeting release timelines.',
+  },
 ];
 
 export const skills: Skill[] = [
   // Frontend
-  { id: '1', name: 'React', icon: '⚛️', category: 'frontend' },
-  { id: '2', name: 'Next.js', icon: '▲', category: 'frontend' },
+  { id: '1', name: 'React.js', icon: '⚛️', category: 'frontend' },
+  { id: '2', name: 'Angular', icon: '🅰️', category: 'frontend' },
   { id: '3', name: 'JavaScript', icon: '📜', category: 'frontend' },
   { id: '4', name: 'TypeScript', icon: '🔷', category: 'frontend' },
-  { id: '5', name: 'HTML5', icon: '🎨', category: 'frontend' },
+  { id: '5', name: 'HTML5', icon: '🧱', category: 'frontend' },
   { id: '6', name: 'CSS3', icon: '🎨', category: 'frontend' },
-  { id: '7', name: 'Tailwind CSS', icon: '🎨', category: 'frontend' },
-  { id: '8', name: 'SASS/SCSS', icon: '🎨', category: 'frontend' },
-  { id: '9', name: 'Redux', icon: '🎨', category: 'frontend' },
-  
+  { id: '7', name: 'React Native', icon: '📱', category: 'frontend' },
+  { id: '8', name: 'D3.js', icon: '📊', category: 'frontend' },
+
   // Backend
-  { id: '10', name: 'Java (17+)', icon: '☕', category: 'backend' },
-  { id: '11', name: 'Spring Boot', icon: '☕', category: 'backend' },
-  { id: '12', name: 'Project Reactor', icon: '☕', category: 'backend' },
+  { id: '10', name: 'Java', icon: '☕', category: 'backend' },
+  { id: '11', name: 'Spring Boot', icon: '🍃', category: 'backend' },
+  { id: '12', name: 'Python', icon: '🐍', category: 'backend' },
   { id: '13', name: 'Node.js', icon: '🟢', category: 'backend' },
   { id: '14', name: 'Express', icon: '⚡', category: 'backend' },
-  { id: '15', name: 'Python', icon: '🐍', category: 'backend' },
-  { id: '16', name: 'REST APIs', icon: '🎯', category: 'backend' },
-  { id: '17', name: 'Microservices', icon: '🎯', category: 'backend' },
-  { id: '18', name: 'Event-Driven Architecture', icon: '◈', category: 'backend' },
+  { id: '15', name: 'C# / .NET', icon: '#', category: 'backend' },
+  { id: '16', name: 'REST APIs', icon: '🔗', category: 'backend' },
+  { id: '17', name: 'Microservices', icon: '📦', category: 'backend' },
 
   // DevOps & Cloud
-  { id: '19', name: 'Docker', icon: '🐳', category: 'devops' },
-  { id: '20', name: 'Kubernetes', icon: '☸️', category: 'devops' },
-  { id: '21', name: 'Jenkins', icon: '🔧', category: 'devops' },
+  { id: '20', name: 'Docker', icon: '🐳', category: 'devops' },
+  { id: '21', name: 'Kubernetes', icon: '☸️', category: 'devops' },
   { id: '22', name: 'AWS', icon: '☁️', category: 'devops' },
-  { id: '23', name: 'Azure', icon: '🔵', category: 'devops' },
-  { id: '24', name: 'CI/CD Pipelines', icon: '☁️', category: 'devops' },
-  { id: '25', name: 'SonarQube', icon: '🔵', category: 'devops' },
-  { id: '26', name: 'Git Version Control', icon: '☸️', category: 'devops' },
+  { id: '23', name: 'Azure', icon: '🔷', category: 'devops' },
+  { id: '24', name: 'CI/CD (Jenkins, Azure Pipelines)', icon: '🚀', category: 'devops' },
+  { id: '25', name: 'Git & Bitbucket', icon: '🔧', category: 'devops' },
 
   // Database
-  { id: '27', name: 'PostgreSQL', icon: '🍃', category: 'database' },
-  { id: '28', name: 'MongoBD', icon: '🐘', category: 'database' },
-  { id: '29', name: 'MySQL', icon: '🐬', category: 'database' },
-  { id: '30', name: 'Redis', icon: '🔴', category: 'database' },
-  { id: '31', name: 'Firebase', icon: '🔥', category: 'database' },
-  { id: '32', name: 'Database Design', icon: '🔴', category: 'database' },
-  { id: '33', name: 'Query Optimization', icon: '🔴', category: 'database' },
-  { id: '34', name: 'Caching Strategies', icon: '🔴', category: 'database' },
-  
-  // Messaging & Workflow Orchestration
-  { id: '35', name: 'RabbitMQ', icon: '📱', category: 'messaging' },
-  { id: '103', name: 'Kafka', icon: '📱', category: 'messaging' },
-  { id: '36', name: 'Netflix Conductor', icon: '🦋', category: 'messaging' },
-  { id: '37', name: 'Workflow Automation', icon: '🤖', category: 'messaging' },
-  { id: '38', name: 'Event Streaming', icon: '🍎', category: 'messaging' },
+  { id: '30', name: 'MySQL', icon: '🐬', category: 'database' },
+  { id: '31', name: 'PostgreSQL', icon: '🐘', category: 'database' },
+  { id: '32', name: 'Oracle DB', icon: '📀', category: 'database' },
+  { id: '33', name: 'SQL Server', icon: '🗄️', category: 'database' },
+  { id: '34', name: 'NoSQL / MongoDB', icon: '🍃', category: 'database' },
+
+  // Messaging / Data
+  { id: '40', name: 'Kafka', icon: '📡', category: 'messaging' },
+  { id: '41', name: 'Data Pipelines & ETL', icon: '🛠️', category: 'messaging' },
 
   // Testing
-  { id: '39', name: 'JUnit', icon: '📱', category: 'testing' },
-  { id: '40', name: 'Mockito', icon: '📱', category: 'testing' },
-  { id: '41', name: 'Jest', icon: '📱', category: 'testing' },
-  { id: '42', name: 'Selenium', icon: '📱', category: 'testing' },
-  { id: '43', name: 'Playwright', icon: '📱', category: 'testing' },
-  { id: '44', name: 'Cucumber', icon: '📱', category: 'testing' },
-  { id: '45', name: 'Behavior-Driven Development', icon: '📱', category: 'testing' },
-  { id: '46', name: 'Test-Driven Development', icon: '📱', category: 'testing' },
-  
+  { id: '50', name: 'JUnit', icon: '✅', category: 'testing' },
+  { id: '51', name: 'Selenium', icon: '🧪', category: 'testing' },
+  { id: '52', name: 'Postman', icon: '📮', category: 'testing' },
+
   // Other Skills
-  { id: '47', name: 'Agile/Scrum', icon: '🏃', category: 'other-skills' },
-  { id: '60', name: 'Jira', icon: '🔌', category: 'other-skills' },
-  { id: '61', name: 'Confluence', icon: '🔌', category: 'other-skills' },
-  { id: '53', name: 'Postman', icon: '📚', category: 'other-skills' },
-  { id: '57', name: 'Bash/Shell', icon: '🔌', category: 'other-skills' },
-  { id: '63', name: 'Team Collaboration', icon: '🏃', category: 'other-skills' },
-  { id: '68', name: 'Agile Mindset', icon: '🏃', category: 'other-skills' },
-  { id: '69', name: 'Attention to Detail', icon: '🏃', category: 'other-skills' },
-  { id: '55', name: 'Intellij IDEA', icon: '🏃', category: 'other-skills' },
-  { id: '56', name: 'Visual Studio Code', icon: '🔌', category: 'other-skills' },
+  { id: '60', name: 'Agile / Scrum', icon: '🏃', category: 'other-skills' },
+  { id: '61', name: 'Jira', icon: '🧩', category: 'other-skills' },
+  { id: '62', name: 'Confluence', icon: '📘', category: 'other-skills' },
+  { id: '63', name: 'Figma', icon: '🎯', category: 'other-skills' },
 ];
 
 export const projects: Project[] = [
   {
     id: '1',
-    title: 'Semantic Search Engine',
-    description: 'Developed a semantic movie search engine with an intuitive JSP-driven UI. Built a natural-language query algorithm using Microsoft LUIS for intent detection and integrated SPARQL queries on DBpedia to deliver accurate movie results.',
-    technologies: ['Java', 'Jsp', 'SPARQL', 'Spring MVC'],
+    title: 'EShop',
+    description:
+      'Designed and implemented an e-commerce application where admins can manage products and customers can browse and place orders. Added secure authentication with .NET and JWT-based access levels and tuned APIs to keep server response times under 3 seconds.',
+    technologies: ['.NET', 'C#', 'JWT', 'SQL', 'REST APIs'],
     links: {
-      github: 'https://github.com/VoraHarsh/Projects/tree/master/Search%20Engine%20Based%20on%20Semantic%20Web-Java%20WebApp/WebApp',
-      screenshots: 'https://drive.google.com/drive/folders/1j0l5FExAKG5wJEPtcg2J6Gdu7D5qbx_M?usp=sharing',
-      publication: 'https://www.ijsr.net/getabstract.php?paperid=ART20196648',
+      github: '#',
+      screenshots: '',
+      publication: '',
     },
     image: '/Project1.png',
   },
   {
     id: '2',
-    title: 'Movie Ticket Booking System',
-    description: 'Developed an Android-based movie ticket booking app using Java, Firebase, and MySQL. Enabled users to select theatres, choose movies and showtimes, view seating charts, reserve seats in real time, complete payments, and access their order history.',
-    technologies: ['Android', 'Java', 'FireBase', 'MySQL'],
+    title: 'UPSC Pre',
+    description:
+      'Built an Android learning platform using Python, Flask, and Elasticsearch to help students prepare for UPSC exams. Collaborated with a small team to deliver search and content features and helped the app reach a top ten ranking among UPSC-related apps on the Play Store.',
+    technologies: ['Python', 'Flask', 'Elasticsearch', 'Android'],
     links: {
-      github: 'https://github.com/VoraHarsh/Projects/tree/master/Movie%20Ticket%20Booking%20System-Desktop%20Application',
-      screenshots: 'https://drive.google.com/drive/folders/1ahMN17RvjemHflvselTJjxvA3nV5YxpF?usp=sharing',
+      github: '#',
+      screenshots: '',
+      publication: '',
     },
     image: '/Project2.png',
   },
   {
     id: '3',
-    title: 'Online Book Store',
-    description: 'Built desktop and mobile applications for online book search and purchase, supporting title, author, and subject-based queries. Designed a real-time shopping cart that displays selected items, updates totals dynamically, and enables easy item removal.',
-    technologies: ['Android', 'Java', 'FireBase', 'MySQL'],
+    title: 'GatorShop',
+    description:
+      'Developed a web app for University of Florida students to discover affordable, local shopping deals near campus. Implemented authentication with JWT and Passport, and connected the app to an SQL database via APIs written in Go.',
+    technologies: ['Go', 'JWT', 'Passport', 'SQL', 'REST APIs'],
     links: {
-      github: 'https://github.com/VoraHarsh/Projects/tree/master/Online%20Book%20Store-Android%20Application/BookkarBooks/BookkarBooks',
-      screenshots: 'https://drive.google.com/drive/folders/1YrANLbXh7Du0BqIwjAonlvjypOlDvY8L?usp=sharing',
+      github: '#',
+      screenshots: '',
+      publication: '',
+    },
+    image: '/Project3.jpg',
+  },
+  {
+    id: '4',
+    title: 'Action Identification in 2D Images',
+    description:
+      'Implemented and evaluated deep learning models to classify human actions from 2D images using the Stanford-40 dataset. Compared architectures like ResNet-50, VGG16/19, EfficientNet-B7, and Inception V3, concluding that Inception V3 provided the best performance for this task.',
+    technologies: ['Python', 'TensorFlow / Keras', 'CNNs', 'Computer Vision'],
+    links: {
+      github: '#',
+      screenshots: '',
+      publication: '',
     },
     image: '/Project3.jpg',
   },
@@ -168,68 +169,65 @@ export const projects: Project[] = [
 export const education: Education[] = [
   {
     id: '1',
-    degree: "Master's in Computer Science",
-    institution: 'Illinois Institute of Technology',
-    duration: '2019 - 2021',
-    description: 'Coursework: Algorithms, Artificial Intelligence, Advanced Operating Systems, Machine Learning, Deep Learning, Mobile Application Development, Enterprise Web Applications, Computer Vision, and Big Data Technologies.',
+    degree: 'MS in Computer Science Engineering',
+    institution: 'University of Florida, Gainesville, FL',
+    duration: 'Aug 2023 – Dec 2024',
+    description:
+      'Coursework included Distributed Systems, Advanced Data Structures, Machine Learning, Computer Vision, Big Data Technologies, and Enterprise Web Applications.',
     type: 'education',
   },
   {
     id: '2',
-    degree: "Bachelor's in Computer Engineering",
-    institution: 'Mumbai University',
-    duration: '2015 - 2019',
-    description: 'Coursework: Data Structures, Analysis of Algorithms, Object-Oriented Design, Big Data Analysis, Database Management Systems, and Distributed Systems.',
-    type: 'education',
+    degree: 'Microsoft Certified: Azure Fundamentals',
+    institution: 'Microsoft',
+    duration: 'Certification',
+    description: 'Fundamentals of cloud concepts, Azure services, security, and cost management.',
+    type: 'certification',
   },
-  // Add certifications
   {
     id: '3',
-    degree: 'Oracle Certified Professional, Java Programmer',
+    degree: 'AWS Academy Graduate – Cloud Foundations',
+    institution: 'AWS Academy',
+    duration: 'Certification',
+    description: 'Introduced to core AWS services, cloud concepts, security, architecture, and pricing models.',
+    type: 'certification',
+  },
+  {
+    id: '4',
+    degree: 'Oracle Certified Multicloud Architect',
     institution: 'Oracle',
-    duration: '2018',
-    description: 'Professional certification in Java programming and software development.',
+    duration: 'Certification',
+    description:
+      'Training across DevOps practices and multicloud design patterns spanning deployment automation, monitoring, and resilient infrastructure.',
+    type: 'certification',
+  },
+  {
+    id: '5',
+    degree: 'Oracle Certified DevOps Professional',
+    institution: 'Oracle',
+    duration: 'Certification',
+    description:
+      'Training across DevOps practices and multicloud design patterns spanning deployment automation, monitoring, and resilient infrastructure.',
     type: 'certification',
   },
 ];
 
-export const recommendations: Recommendation[] = [
-  {
-    id: '1',
-    name: 'Benjamin Novatzky',
-    role: 'Senior Engineering Manager',
-    company: 'GE Healthcare',
-    text: "I've had the chance to be Harsh's manager over the last 4 years. During this time Harsh has grown from an entry-level engineer to an engineer with solid execution and ownership. Harsh is a dedicated reliable contributor, with technical skills in back-end services, Java/SpringBoot, automation technologies (Serenity/Playwright), and expanding skill in front-end technologies (JavaScript/TypeScript). He has also been expanding his design skills by taking on new challenging areas of design ownership. Harsh likes to take on technical challenges, learn new areas, and do failure mode thinking. He's also become a good resource for the team and a go-to person for the areas under his ownership. Harsh is easy to work with, is very responsive to product needs/pivots, and is willing to help out wherever the team needs support. Overall, Harsh is great to have on the team and is an important asset to the team.",
-    avatar: 'BN',
-  },
-  {
-    id: '2',
-    name: 'Ali Mihankhah',
-    role: 'Staff Software Engineer',
-    company: 'GE Healthcare',
-    text: "I worked with Harsh for over 4 years, where he played a key role in developing backend services using Java, Spring, and RESTful APIs. Harsh quickly ramped up on reactive programming and excelled at building modular, asynchronous pipelines for processing data — an area that required both precision and deep technical understanding. His work consistently resulted in clean, well-structured APIs that were both meaningful and easy to integrate. Harsh was always open to feedback and approached collaboration with humility, curiosity, and professionalism. Whether it was refining a design, debugging a challenging issue, or contributing to architectural discussions, Harsh showed clarity, ownership, and a growth-oriented mindset to every interaction. He consistently looked for opportunities to expand his technical domain and was able to contribute across the stack when needed. Harsh is reliable, adaptable, and deeply committed to delivering high-quality solutions. He would be a valuable asset to any engineering team.",
-    avatar: 'AM',
-  },
-  {
-    id: '3',
-    name: 'Supradeep Peyetti',
-    role: 'Sr. QA Automation Engineer',
-    company: 'GE HEalthcare',
-    text: "As Harsh's Engineer Peer at GeHealthCare, I have had the chance of working with Harsh and I can confidently say he’s one of the most reliable and technically sound software engineers I’ve worked with. As a Software Engineer , Harsh brings a strong command of both backend development and frontend expertise , consistently delivering clean, scalable, and well-architected solutions. What stands out most is his deep understanding of design principles and his ability to apply them thoughtfully across projects. Harsh approaches every challenge with clarity and precision. He’s also a great collaborator—always willing to share knowledge, support teammates, and contribute to a positive team culture. I highly recommend Harsh for any role that demands strong engineering skills, architectural thinking, and a proactive mindset.",
-    avatar: 'SP',
-  },
-  {
-    id: '4',
-    name: 'Dimple Mehra',
-    role: 'Senior Machine Learning Engineer',
-    company: 'Unity',
-    text: "Harsh is a great professional to work with. We've worked together on several projects and he helped me a lot to learn new skills. He always went the extra mile and found great ways to quickly solve problems. It would be pleasure working with him again in future.",
-    avatar: 'DM',
-  },
-];
+
 
 export const socialLinks: SocialLinks[] = [
-  { name: 'GitHub', icon: React.createElement(Github, { size: 18 }), url: 'https://github.com/VoraHarsh' },
-  { name: 'LinkedIn', icon: React.createElement(Linkedin, { size: 18 }), url: 'https://linkedin.com/in/voraharsh' },
-  { name: 'Email', icon: React.createElement(Mail, { size: 18 }), url: 'mailto:harshvora242@gmail.com' },
+  {
+    name: 'GitHub',
+    icon: React.createElement(Github, { size: 18 }),
+    url: 'https://github.com/Jahnavireddyb',
+  },
+  {
+    name: 'LinkedIn',
+    icon: React.createElement(Linkedin, { size: 18 }),
+    url: 'https://www.linkedin.com/in/your-linkedin',
+  },
+  {
+    name: 'Email',
+    icon: React.createElement(Mail, { size: 18 }),
+    url: 'mailto:jahnavireddy.bh@gmail.com',
+  },
 ];

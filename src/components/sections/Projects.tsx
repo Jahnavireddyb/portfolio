@@ -69,22 +69,7 @@ export default function Projects() {
                   ))}
                 </div>
                 <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-                  {project.links.github && (
-                    <a 
-                      href={project.links.github} 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      style={{ color: 'var(--accent)', textDecoration: 'none', fontWeight: '500', fontSize: '0.9rem', transition: 'all 0.3s ease' }}
-                      onMouseEnter={(e) => {
-                        e.currentTarget.style.color = 'var(--accent-hover)';
-                      }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.style.color = 'var(--accent)';
-                      }}
-                    >
-                      🔗 GitHub
-                    </a>
-                  )}
+                  
                   {project.links.live && (
                     <a 
                       href={project.links.live} 
